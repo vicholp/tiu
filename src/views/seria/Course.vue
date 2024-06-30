@@ -1,0 +1,102 @@
+<template>
+  <div>
+    <Navbar />
+    <div class="flex flex-col gap-5">
+      <div class="bg-blue-800 text-white ">
+        <div class="container mx-auto flex gap-5 px-5">
+          <div class="font-bold border-b-2 border-spacing-5 px-3 py-5">
+            Curso
+          </div>
+          <div class="px-3 py-5">
+            Participantes
+          </div>
+          <router-link to="/course/1/califications">
+            <div class="px-3 py-5">
+              Calificaciones
+            </div>
+          </router-link>
+          <div class="px-3 py-5">
+            Competencias
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto flex flex-col gap-5">
+        <div class="font-bold text-3xl">
+          (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
+        </div>
+        <div class="flex flex-col gap-5 bg-white p-5 rounded">
+          <div class="flex">
+            <div
+              v-for="(unit, index) in units"
+              :key="unit"
+              :class="`p-3 px-5 text-blue-500 rounded-t ${index === 0 ? 'border font-bold' : 'border-b'}`"
+            >
+              {{ unit }}
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div
+              v-for="link in links"
+              :key="link"
+              class="flex items-center gap-5 border rounded p-5"
+            >
+              <div :class="`${link.class} p-2 rounded text-white`">
+                <Icon
+                  :icon="link.icon"
+                  class="text-4xl"
+                />
+              </div>
+              <router-link to="/upload">
+                <div class="text-blue-500">
+                  {{ link.title }}
+                </div>
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+
+import { Icon } from '@iconify/vue';
+import Navbar from '@/components/Navbar.vue';
+
+
+export default {
+  components: {
+    Icon,
+    Navbar,
+  },
+  data() {
+    return {
+      units: [
+        'Informacion General',
+        'Unidad 1',
+        'Unidad 2',
+        'Unidad 3',
+      ],
+      links: [
+        {
+          icon: 'mdi:link',
+          title: 'Noticias y avisos',
+          class: 'bg-red-500',
+        },
+        {
+          icon: 'mdi:link',
+          title: 'Noticias y avisos',
+          class: 'bg-red-500',
+        },
+        {
+          icon: 'mdi:link',
+          title: 'Entrega 4',
+          class: 'bg-red-500',
+        },
+      ],
+    };
+  },
+};
+
+</script>
