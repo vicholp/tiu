@@ -33,6 +33,36 @@ const router = createRouter({
       name: 'upload',
       component: () => import('../views/seria/UploadFile.vue'),
     },
+    {
+      path: '/chistosa/',
+      name: 'chistosa.home',
+      component: () => import('../views/chistosa/Index.vue'),
+    },
+    {
+      path: '/chistosa/course/:id',
+      name: 'chistosa.course',
+      component: () => import('../views/chistosa/Course.vue'),
+    },
+    {
+      path: '/chistosa/course/:id/califications',
+      name: 'chistosa.course.califications',
+      component: () => import('../views/chistosa/CourseCalifications.vue'),
+    },
+    {
+      path: '/chistosa/course/:id/answer',
+      name: 'chistosa.course.answer',
+      component: () => import('../views/chistosa/AnswerQuestions.vue'),
+    },
+    {
+      path: '/chistosa/calendar',
+      name: 'chistosa.calendar',
+      component: () => import('../views/chistosa/Calendar.vue'),
+    },
+    {
+      path: '/chistosa/upload',
+      name: 'chistosa.upload',
+      component: () => import('../views/chistosa/UploadFile.vue'),
+    },
   ],
 });
 

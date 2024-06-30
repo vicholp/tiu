@@ -1,29 +1,29 @@
 <template>
-  <Navbar />
-  <div class="bg-gray-500 text-white ">
+  <NavbarChistosa />
+  <div class="border-b-4 border-orange-300 bg-orange-50 text-gray-800 ">
     <div class="container mx-auto flex gap-5 px-5">
-      <router-link to="/course/1">
-        <div class="px-3 py-5  font-bold border-b-2">
-          Curso
-        </div>
-      </router-link>
+      <div class="font-bold border-b-2 border-spacing-5 px-3 py-5">
+        Curso
+      </div>
       <div class="px-3 py-5">
         Participantes
       </div>
-      <div class="px-3 py-5 border-spacing-5 ">
-        Calificaciones
-      </div>
+      <router-link to="/chistosa/course/1/califications">
+        <div class="px-3 py-5">
+          Calificaciones
+        </div>
+      </router-link>
       <div class="px-3 py-5">
         Competencias
       </div>
     </div>
   </div>
   <div class="mt-6 container mx-auto flex flex-col gap-5">
-    <h1 class="text-3xl font-medium">
+    <h1 class="py-1 font-bold text-xl text-gray-800">
       Entrega 4
     </h1>
-    <div class="bg-white  p-8">
-      <div class="bg-gray-100 p-4">
+    <div class="bg-white rounded-xl shadow p-8">
+      <div class="bg-gray-100 p-4 rounded-xl">
         <p>
           <b>Apertura:</b> miercoles, 27 de marzo de 2024, 00:00
         </p>
@@ -38,7 +38,7 @@
         @change="uploaded = true"
       >
       <label
-        class="block my-6 cursor-pointer bg-gray-500 w-fit text-white px-3 py-2"
+        class="block my-6 cursor-pointer bg-blue-500 rounded-xl w-fit text-white px-3 py-2"
         for="file"
       >
         Agregar entrega
@@ -47,8 +47,8 @@
       <h2 class="text-2xl mb-6">
         Estado de la entrega
       </h2>
-      <table class="table-auto">
-        <tbody>
+      <table class="table-auto ">
+        <tbody class="">
           <tr
             v-for="item in table"
             :key="item.title"
@@ -57,12 +57,18 @@
             <td class="border px-4 py-2 font-bold">
               {{ item.title }}
             </td>
-            <td class="border px-4 py-2">
+            <td class="border px-3 ">
               <p v-if="item.title == 'Estado de la entrega'">
-                <span v-if="uploaded">
+                <span
+                  v-if="uploaded"
+                  class="bg-green-500 text-white px-5 py-2 rounded-xl"
+                >
                   Entregado
                 </span>
-                <span v-else>
+                <span
+                  v-else
+                  class="px-4 py-2"
+                >
                   No se ha enviado nada en esta tarea
                 </span>
               </p>
@@ -79,11 +85,11 @@
 
 <script>
 
-import Navbar from "@/components/Navbar.vue";
+import NavbarChistosa from "@/components/NavbarChistoso.vue";
 
 export default {
   components: {
-    Navbar,
+    NavbarChistosa,
   },
   data() {
     return {

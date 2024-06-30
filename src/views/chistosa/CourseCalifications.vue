@@ -1,36 +1,45 @@
 <template>
   <div>
-    <Navbar />
+    <NavbarChistosa />
     <div class="flex flex-col gap-5">
-      <div class="bg-gray-500 text-white ">
+      <div class="border-b-4 border-orange-300 bg-orange-50 text-gray-800 ">
         <div class="container mx-auto flex gap-5 px-5">
-          <router-link to="/course/1">
-            <div class="px-3 py-5">
+          <router-link to="/chistosa/course/1">
+            <div class=" border-spacing-5 px-3 py-5">
               Curso
             </div>
           </router-link>
+
           <div class="px-3 py-5">
             Participantes
           </div>
-          <div class="px-3 py-5 font-bold border-b-2 border-spacing-5 ">
-            Calificaciones
-          </div>
+          <router-link to="/chistosa/course/1/califications">
+            <div class="px-3 py-5  font-medium">
+              Calificaciones
+            </div>
+          </router-link>
           <div class="px-3 py-5">
             Competencias
           </div>
         </div>
       </div>
       <div class="container mx-auto flex flex-col gap-5">
-        <div class="font-bold text-3xl">
-          (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
+        <div class="flex flex-col justify-center gap-2 py-3">
+          <div class="font-bold text-xl text-gray-800 ">
+            Gestion de proyectos informaticos
+          </div>
         </div>
-        <div class="flex flex-col gap-5 bg-white p-5">
+        <div class="flex flex-col gap-9 bg-white p-5 rounded shadow-xl">
           <div
             v-for="calification in califications"
             :key="calification.name"
             class="grid grid-cols-12"
           >
             <div class="col-span-3 flex items-center gap-3">
+              <Icon
+                icon="line-md:document"
+                class="text-xl"
+              />
               {{ calification.name }}
             </div>
             <div class="col-span-1">
@@ -61,13 +70,12 @@
 <script>
 
 import { Icon } from '@iconify/vue';
-import Navbar from '@/components/Navbar.vue';
-
+import NavbarChistosa from '@/components/NavbarChistoso.vue';
 
 export default {
   components: {
     Icon,
-    Navbar,
+    NavbarChistosa,
   },
   data() {
     return {

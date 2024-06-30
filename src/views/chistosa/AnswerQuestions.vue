@@ -1,7 +1,10 @@
 <template>
   <div>
-    <Navbar />
-    <div class="flex flex-col gap-5 py-5">
+    <NavbarChistosa />
+    <h1 class="text-3xl font-medium mb-5 container mx-auto mt-8">
+      Control 4
+    </h1>
+    <div class="flex flex-col gap-5 py-5 shadow-xl p-6 mx-8 bg-white rounded-xl mb-6">
       <div class="container mx-auto flex flex-col gap-5">
         <div class="font-bold text-3xl">
           (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
@@ -13,10 +16,15 @@
               :key="question.question"
               class="flex items-center gap-5"
             >
-              <div class="border bg-white h-full justify-center flex p-5 whitespace-nowrap">
-                Pregunta {{ index + 1 }}
+              <div class="bg-blue-100 h-full justify-center flex flex-col p-5 whitespace-nowrap rounded-xl font-bold">
+                <div>
+                  Pregunta {{ index + 1 }}
+                </div>
+                <div>
+                  Puntua {{ question.puntaje }}
+                </div>
               </div>
-              <div class="flex flex-col gap-3 border bg-white p-5 w-full">
+              <div class="flex flex-col gap-3 bg-blue-200 p-5 w-full rounded-xl">
                 <div>
                   {{ question.question }}
                 </div>
@@ -35,7 +43,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-3 p-5 w-50 h-full border bg-white">
+          <div class="flex flex-col gap-3 p-5 w-50 h-full bg-white rounded-xl shadow">
             <div class="flex gap-2">
               <div class="p-2 border">
                 1
@@ -44,12 +52,19 @@
                 2
               </div>
             </div>
-            <router-link to="/course/1">
+            <router-link to="/chistosa/course/1">
               <button class="font-medium p-3">
                 Finalizar intento
               </button>
             </router-link>
           </div>
+        </div>
+        <div class="content-center justify-center">
+          <router-link to="/chistosa/course/1">
+            <button class="font-medium p-3">
+              Finalizar intento
+            </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -59,13 +74,13 @@
 <script>
 
 import { Icon } from '@iconify/vue';
-import Navbar from '@/components/Navbar.vue';
+import NavbarChistosa from '@/components/NavbarChistoso.vue';
 
 
 export default {
   components: {
     Icon,
-    Navbar,
+    NavbarChistosa,
   },
   data() {
     return {
@@ -78,6 +93,7 @@ export default {
             'Lima',
             'Montevideo',
           ],
+          puntaje: '20',
         },
         {
           question: '¿Cuál es la capital de Argentina?',
@@ -87,6 +103,7 @@ export default {
             'Lima',
             'Montevideo',
           ],
+          puntaje: '10',
         },
       ],
     };
