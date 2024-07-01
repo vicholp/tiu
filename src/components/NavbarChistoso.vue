@@ -42,7 +42,7 @@
         class="absolute right-0 mt-20 w-48 bg-[#ff9900] hover:bg-[#ffff11] hover:text-gray-800 font-bold text-white border-2 border-black shadow-lg rounded-lg"
       >
         <router-link
-          :to="{ name: 'calendar' }"
+          :to="{ name: 'chistosa.calendar' }"
           class="block px-4 py-2"
         >
           Calendario

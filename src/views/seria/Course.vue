@@ -4,18 +4,20 @@
     <div class="flex flex-col gap-5">
       <div class="bg-gray-500 text-white ">
         <div class="container mx-auto flex gap-5 px-5">
-          <div class="font-bold border-b-2 border-spacing-5 px-3 py-5">
-            Curso
-          </div>
-          <div class="px-3 py-5">
+          <router-link to="/course/1">
+            <div class="font-medium border-b-2 border-spacing-5 px-3 py-4">
+              Curso
+            </div>
+          </router-link>
+          <div class="px-3 py-4">
             Participantes
           </div>
           <router-link to="/course/1/califications">
-            <div class="px-3 py-5">
+            <div class="px-3 py-4">
               Calificaciones
             </div>
           </router-link>
-          <div class="px-3 py-5">
+          <div class="px-3 py-4">
             Competencias
           </div>
         </div>
@@ -83,7 +85,7 @@ export default {
           icon: 'mdi:link',
           title: 'Noticias y avisos',
           class: 'border-2 border-gray-500',
-          link: '/upload',
+          link: '',
 
         },
         {

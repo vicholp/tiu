@@ -4,27 +4,30 @@
     <div class="flex flex-col gap-5">
       <div class="border-b-4 border-orange-300 bg-orange-50 text-gray-800 ">
         <div class="container mx-auto flex gap-5 px-5">
-          <div class="font-bold  px-3 py-5">
-            Curso
-          </div>
-          <div class="px-3 py-5">
+          <router-link to="/chistosa/course/1">
+            <div class="border-b-2 font-medium border-red-500 border-spacing-5 px-3 py-4">
+              Curso
+            </div>
+          </router-link>
+
+          <div class="px-3 py-4">
             Participantes
           </div>
           <router-link to="/chistosa/course/1/califications">
-            <div class="px-3 py-5">
+            <div class="px-3 py-4">
               Calificaciones
             </div>
           </router-link>
-          <div class="px-3 py-5">
+          <div class="px-3 py-4">
             Competencias
           </div>
         </div>
       </div>
       <div class="container mx-auto flex flex-col gap-5">
         <div class="flex flex-col justify-center gap-2 py-3">
-          <div class="font-bold text-xl text-gray-800 ">
-            Gestion de proyectos informaticos
-          </div>
+          <h1 class="text-3xl font-medium mb-5 container mx-auto">
+            (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
+          </h1>
           <div class=" flex gap-3">
             <div class="bg-gray-200 text-sm rounded px-3 py-1 flex items-center gap-1">
               <Icon icon="line-md:menu" />
@@ -99,7 +102,7 @@ export default {
           icon: 'line-md:bell-alert',
           title: 'Noticias y avisos',
           class: ' bg-blue-500 text-white',
-          link: '/chistosa/upload',
+          link: '',
         },
         {
           icon: 'line-md:document',

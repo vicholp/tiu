@@ -2,27 +2,33 @@
   <NavbarChistosa />
   <div class="border-b-4 border-orange-300 bg-orange-50 text-gray-800 ">
     <div class="container mx-auto flex gap-5 px-5">
-      <div class="font-bold border-b-2 border-spacing-5 px-3 py-5">
-        Curso
-      </div>
-      <div class="px-3 py-5">
+      <router-link to="/chistosa/course/1">
+        <div class="border-spacing-5 px-3 py-4">
+          Curso
+        </div>
+      </router-link>
+
+      <div class="px-3 py-4">
         Participantes
       </div>
       <router-link to="/chistosa/course/1/califications">
-        <div class="px-3 py-5">
+        <div class="px-3 py-4">
           Calificaciones
         </div>
       </router-link>
-      <div class="px-3 py-5">
+      <div class="px-3 py-4">
         Competencias
       </div>
     </div>
   </div>
+  <h1 class="text-3xl font-medium mb-5 container mx-auto mt-8">
+    (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
+  </h1>
   <div class="mt-6 container mx-auto flex flex-col gap-5">
-    <h1 class="py-1 font-bold text-xl text-gray-800">
-      Entrega 4
-    </h1>
     <div class="bg-white rounded-xl shadow p-8">
+      <h2 class="py-1 font-bold text-xl text-gray-800 mb-4">
+        Entrega 4
+      </h2>
       <div class="bg-gray-100 p-4 rounded-xl">
         <p>
           <b>Apertura:</b> miercoles, 27 de marzo de 2024, 00:00
