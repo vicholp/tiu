@@ -24,7 +24,7 @@
         <div class="font-bold text-3xl">
           (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
         </div>
-        <div class="flex flex-col gap-5 bg-white p-5">
+        <div class="flex flex-col gap-5 bg-white p-5 mb-6 shadow">
           <div class="flex">
             <div
               v-for="(unit, index) in units"
@@ -88,14 +88,14 @@ export default {
         },
         {
           icon: 'mdi:link',
-          title: 'Noticias y avisos',
+          title: 'Entrega 4',
           class: 'border-2 border-gray-500',
           link: '/upload',
 
         },
         {
           icon: 'mdi:link',
-          title: 'Entrega 4',
+          title: 'Control 4',
           class: 'border-2 border-gray-500',
           link: '/course/1/answer',
 

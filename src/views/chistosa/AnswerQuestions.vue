@@ -2,12 +2,12 @@
   <div>
     <NavbarChistosa />
     <h1 class="text-3xl font-medium mb-5 container mx-auto mt-8">
-      Control 4
+      (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
     </h1>
     <div class="flex flex-col gap-5 py-5 shadow-xl p-6 mx-8 bg-white rounded-xl mb-6">
       <div class="container mx-auto flex flex-col gap-5">
         <div class="font-bold text-3xl">
-          (202401)(INF360) GESTIÓN DE PROYECTOS INFORMÁTICOS|Paralelos:200/201
+          Control 4
         </div>
         <div class="flex gap-5">
           <div class="flex flex-col flex-grow gap-5">
@@ -61,7 +61,7 @@
         </div>
         <div class="content-center justify-center">
           <router-link to="/chistosa/course/1">
-            <button class="font-medium p-3">
+            <button class="py-2 px-4 text-white font-bold border rounded-xl bg-blue-500 hover:bg-blue-600">
               Finalizar intento
             </button>
           </router-link>
